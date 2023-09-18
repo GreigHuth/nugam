@@ -27,7 +27,7 @@ function get_cell(x, y)
 end
 
 --does the slope collision
---the x and y given with typicall refer to a sensor on an actor in the game
+--the x and y given with typically refer to a sensor on an actor in the game
 --the function returns how much the actor needs to be moved up by to no longer be
 -- colliding with the stairs
 function slope_collision(x, y)

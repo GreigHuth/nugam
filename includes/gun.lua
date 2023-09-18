@@ -6,7 +6,7 @@ bullet_colour = 11
 
 bullets = {}
 
-function bullet_draw(bullet)
+function bullet_update_and_draw(bullet)
 
     --before we draw it, check if it needs to be deleted
     local deleted = bullet_del(bullet) 
@@ -16,8 +16,9 @@ function bullet_draw(bullet)
     local mul = 2 --bullet speed multiplier
 
     --update bullet positions according to thier velocity
-    bullet[1] += bullet[4] * mul
-    bullet[2] += bullet[5] * mul
+    -- bullet = {x, y, radius, dx, dy, t} 
+    bullet[1] += bullet[4] 
+    bullet[2] += bullet[5]
     circ(bullet[1],bullet[2], bullet[3], bullet_colour)
 end
 
@@ -30,29 +31,6 @@ function bullet_del(bullet)
         return true
     end
 end
-
-
---draw bullet
-function bms_draw()
-
-    foreach(bullets, bullet_draw)
-
-    --draw cursor
-    local cursor_x = stat(32)+camera_pos.x
-    local cursor_y = stat(33)+camera_pos.y
-    circ(cursor_x, cursor_y, 0, 7)
-end
-
-
-function bms_update()
-    if stat(34) == 1 then
-        add_bullet()
-    end
-    rect(60, 60, 3, 3, 6)
-
-
-end
-
 
 function add_bullet()
 
@@ -69,8 +47,7 @@ function add_bullet()
 
     printh("dx, dy:"..dx..","..dy)
 
-
-    local v = 1.5
+    local v = 3
     --x, y, radius, dx, dy, t
     local bullet = {player.x+2, player.y, 0.5, dx*v, dy*v}
     add(bullets, bullet)

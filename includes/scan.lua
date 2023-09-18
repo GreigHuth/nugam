@@ -1,7 +1,7 @@
 --code for the scanning tool
 
-collectables = {
-    ---                                                                                     | max length             
+collectables = {                                                                         ---|
+    ---                                                                                  ---| max length             
     [001] = "test",
     [033] = "the ship you arrived on, it landed after you ejected",
     [034] = "your ship deployed these save points before you crashed",
@@ -14,7 +14,7 @@ collectables = {
     [114] = "the blue has seeped into the rock and consumed it",
     [092] = "this contraption is extracting the blue ore. its loud"
  }
-
+                                                                                        ---|
 scan_rect = {
     x = 0,
     y = 0,
@@ -78,6 +78,7 @@ function find_space(start, stop, text)
 end
 
 --prints dialogue and item descriptions to the screen
+--use coroutines here to make the text gradually appear
 function print_desc(spr)
 
     text = collectables[spr]
