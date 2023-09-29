@@ -7,13 +7,13 @@ __lua__
 
 
 TILE_FLAG = {
-    FOREGROUND = 0,
+    FOREGROUND = 5,
     SOLID = 1,
     TOP = 2,
     ROUGH = 3,
-
-    SCANNABLE = 6,
-    SCREEN_TELEPORTER = 7
+    BREAKABLE1 = 4, 
+    UPGRADER = 6, 
+    COLLECTABLE = 7
 }
 
 NPC_IDS = {
@@ -25,12 +25,20 @@ NPC_IDS = {
 
 collectables = {                                                                         ---|
     ---                                                                                  ---| max length             
-    [000] = "HAVE TO WAKE UP ONE DAY CANT JUST BLINK MY WHOLE LIFE AWAY. GOTTA MOVE GOTTA LIVE ",
-    [001] = "the walls of the cave you have become familiar with. wet.",
-    [033] = "the ship you arrived on, it landed after you ejected",
-    [034] = "your ship deployed these save points before you crashed",
+    [000] = "THE PITCH BLACK GALACTIC SKY",
+    [001] = "smooth dull rocks litter the surface and below. no footholds.",
+    [028] = "yelleygold, the material you have been sent to PILLAGE/excavate ",
+    [033] = "ROUGH JAGGED CEILING",
+    [034] = "ROUGH JAGGED CEILING",
+    [035] = "rough jagged wall, looks somewhat climbable",
+    [036] = "rough jagged wall, looks somewhat climbable",
+    [051] = "rough jagged wall, looks somewhat climbable",
+    [042] = "THE STARS TWINKLE IN THE VOID WITH OPPORTUNITY",
+    [043] = "ANOTHER PLANET IN THE SYSTEM, IT WILL BE FOUND/EXPLOITED SOON ENOUGH",
+    [060] = "THIS SYSTEM IS HOME TO A GIANT, WITH RINGS MADE OF A BILLION ICE FRAGMENTS",
     [049] = "WEAK POROUS ROCK, VULNERABLE TO: [ERROR]",
     [050] = "POROUS ROCK, REINFORCED BY A HARDER SUBSTANCE",
+    [052] = "yelleygold ore, its structure is weak enough to break with your laser",
     [074] = "the cavern wall drips with gooey green gunk.",
     [076] = "the blue has completely absorbed the moss of the cave",
     [102] = "mysterious blue mineral, it has a hauntingly steady glow",
