@@ -1,7 +1,34 @@
-# snowgame
+# Nugame
 
-The game im working on. Still early days but its going to be a jump-and-shoot game of some description.
+The game im working on. It is an exploration platformer.
+New+game = Nugam
 
-Its called snowgame because it was originally going to be set in a snowy place, its not anymore but i still havent thought of a better name.
+## Features Implemented
+
+Textboxes (buggy)
+
+player movement and level physics
+
+wall jumping
+
+wall sliding
+
+scanning items in the environment
+
+laser-ing
+
+## Features Implemented, and then scrapped
+
+Pixel perfect slope collision (too much for this game rn)
+
+Sprite rotation using vectors (a nice effect but not necessary atm) 
+
+Basic NPCs (turns out i want the game to be lonely)
+
+
+
+## Features to Implement
+
+The rest of the game kekw
 
 
